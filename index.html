@@ -9,71 +9,83 @@
 	
 	<form action="#" name="loginForm" id="loginForm" class="loginForm">
 		<!-- Email field -->
-		<label for="mail">Mail or Name<br />
-			<input type="text" id="mail" class="mail" placeholder="Email">
-			<span class="msg" name="msg"></span>
-		</label>
+		<p>
+			<label for="mail">
+				<span>Email or Login</span>
+				<input type="text" id="mail" class="mail" placeholder="Email">
+				<span class="msg" name="msg"></span>
+			</label>
+		</p>
 		
-			<br />
 		
 		<!-- Password field -->
-		<label for="pass">Password<br />
-			<input type="password" id="pass" class="pass "placeholder="Password">
-			<span class="msg" name="msg"></span>
-		</label>
-		
-		<br />
+		<p>
+			<label for="pass">
+				<span>Password</span>
+				<input type="password" id="pass" class="pass "placeholder="Password">
+				<span class="msg" name="msg"></span>
+			</label>
+		</p>
 		
 		<!-- Submit button -->
-		<button type="submit" name="submit" class="submit">Login</button>
-
+		<section>
+			<button type="submit" name="submit" class="submit">Login</button>
+		</section>
 		
-		<div class="nav">
+		<!-- NavBar -->
+		<section class="nav">
 			<a href="#" class="log_link">Login</a>
 			<a href="#" class="reg_link">Registration</a>
-		</div>
+		</section>
 	</form>
 
 	<form action="#" name="regForm" id="regForm" class="regForm">
-		
-		<label for="name">Name<br />
-			<input type="text" id="name" class="name" placeholder="Name">
-			<span class="msg" name="msg"></span>
-		</label>
-		
-			<br />
+		<!-- name -->
+		<p>
+			<label for="name">
+				<span>Name</span>
+				<input type="text" id="name" class="name" placeholder="Name">
+				<span class="msg" name="msg"></span>
+			</label>	
+		</p>
 		
 		<!-- Mail field -->
-		<label for="mail">Mail or Name<br />
-			<input type="text" id="mail" class="mail" placeholder="Email">
-			<span class="msg" name="msg"></span>
-		</label>
-		
-			<br />
+		<p>
+			<label for="mail">
+				<span>Email</span>
+				<input type="text" id="mail" class="mail" placeholder="Email">
+				<span class="msg" name="msg"></span>
+			</label>
+		</p>
 		
 		<!-- Password field -->
-		<label for="pass">Password<br />
-			<input type="password" id="pass" class="pass" placeholder="Password">
-			<span class="msg" name="msg"></span>
-		</label>
+		<p>
+			<label for="pass">
+				<span>Password</span>
+				<input type="password" id="pass" class="pass" placeholder="Password">
+				<span class="msg" name="msg"></span>
+			</label>
+		</p>
 		
-		<br />
-
 		<!-- Password confirm-->
-		<label for="c_pass">Confirm password<br />
-			<input type="password" id="c_pass" class="c_pass" placeholder="Confirm password">
-			<span class="msg" name="msg"></span>
-		</label>
-		
-		<br />
+		<p>
+			<label for="c_pass">
+				<span>Confirm password</span>
+				<input type="password" id="c_pass" class="c_pass" placeholder="Confirm password">
+				<span class="msg" name="msg"></span>
+			</label>
+		</p>
 		
 		<!-- Submit button -->
-		<button type="submit" name="submit" class="submit">Login</button>
-
-		<div class="nav">
+		<section>
+			<button type="submit" name="submit" class="submit">Registration</button>
+		</section>
+		
+		<!-- NavBar -->
+		<section class="nav">
 			<a href="#" class="log_link_2">Login</a>
 			<a href="#" class="reg_link">Registration</a>
-		</div>
+		</section>	
 	</form>
 
 	<script src="script.js"></script>
