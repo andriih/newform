@@ -18,7 +18,12 @@
 	height: 250px;
 	margin: 0 auto;
 }
-
+.none{
+	box-shadow: none;
+}
+.warn{
+	box-shadow: 0px 0px 21px 0px red;
+}
 .msg{
 	color:red;
 	font-size: 10px;
