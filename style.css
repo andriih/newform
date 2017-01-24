@@ -1,0 +1,19 @@
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing:border-box;
+}
+
+.loginForm{
+	border: 1px solid black;
+	width: 200px;
+	height: 150px;
+}
+
+.regForm{
+	display: none;
+	border: 1px solid black;
+	width: 200px;
+	height: 250px;
+}
+
