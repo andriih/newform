@@ -111,8 +111,6 @@ pass2.addEventListener("keyup",function(){
     }else if(valuePass.length <= 3){
         errPlaceholder.textContent = "password to short";
     }else{
-    	//return truePass = valuePass;
-    	//console.log(valuePass);
         errPlaceholder.textContent = "";
     }
 });
@@ -121,6 +119,11 @@ passConfirm.addEventListener("keyup",function(){
         valuePass = this.value.trim(),
         errPlaceholder = parent.querySelector(".msg");
 
+    if(valuePass != pass2.value){
+        errPlaceholder.textContent = "pasword dont match";
+	}else{
+        errPlaceholder.textContent = "";
+	}
 
 
 });
