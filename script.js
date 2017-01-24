@@ -12,23 +12,30 @@ var loginForm = document.forms.loginForm,
 		pass2 = regForm.elements.pass2,
 		passConfirm = regForm.elements.c_pass;
 
-
-
-
-
-
-
-
 regLink.addEventListener("click",function(){
 	regForm.style.display = "block";
 	loginForm.style.display="none";
+	document.title = "Registration";
 });
 logLink.addEventListener("click",function(){
 	regForm.style.display = "none";
 	loginForm.style.display="block";
+    document.title = "Login";
 });
+
 loginForm.addEventListener("submit",function(e){
-	e.preventDefault();
+
+	if(mail.value.length === 0){
+        console.log("mail empty");
+		e.preventDefault();
+	}else if(pass.value.length === 0){
+        msg.innerText = "pass empty";
+        e.preventDefault();
+	}else{
+        console.log("sumit");
+        document.forms.loginForm.submit();
+	}
+
 });
 
 //Mail
@@ -49,7 +56,6 @@ mail.addEventListener("keyup",function(){
 
     }
 });
-
 //PASSWORD
 pass.addEventListener("keyup",function(){
 	var parent = this.parentElement,
@@ -65,7 +71,6 @@ pass.addEventListener("keyup",function(){
     	errPlaceholder.textContent = "";
     }
 });
-
 ///Form registration
 
 regForm.addEventListener("submit",function(e){
