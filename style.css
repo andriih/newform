@@ -3,28 +3,59 @@
 	margin: 0;
 	box-sizing:border-box;
 }
-
-.loginForm{
-	border: 1px solid black;
-	width: 200px;
-	height: 200px;
-	margin: 0 auto;
+h4{
+	text-align: center;
+	font-family: 'Indie Flower', cursive;
+	font-size: 20px;
+}
+input{
+	width: 100%;
+	border-radius: 3px;
+	margin-top: 5px;
+}
+input:hover{
+	box-shadow: rgba(0, 0, 0, 0.3) 0 1px 3px;
 }
 .nav{
-	float: right;
-}
-.success{
-	display: none;
+	display: block;
+	overflow: hidden;
+	margin: 0 auto;
+	width: 120px;
+	margin-top: 20px;
 
 }
-.show{
-	display: block;
+.nav a{
+	text-decoration: none;
+	color: grey;
 }
-.regForm{
-	display: none;
+.nav a:hover{
+	background-color: darkgrey;
+	color: white;
+}
+
+.loginForm{
+	overflow: hidden;
+	border-radius: 5px;
 	border: 1px solid black;
 	width: 200px;
 	height: 250px;
+	margin: 0 auto;
+}
+
+
+.success{
+	display: none;
+}
+.show{
+	display: block;
+	color: green;
+}
+.regForm{
+	display: none;
+	border-radius: 5px;
+	border: 1px solid black;
+	width: 200px;
+	height: 400px;
 	margin: 0 auto;
 }
 .none{
@@ -38,3 +69,18 @@
 	font-size: 10px;
 }
 
+.btn{
+display: block;
+color: white;
+padding: 5px;
+margin: 0 auto;
+margin-top: 10px;
+ border:1px solid #393B3E;-webkit-box-shadow: #737373 0px 1px 5px ;
+ background-image: linear-gradient(to bottom, #d3d3d3, #707070);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#d3d3d3, endColorstr=#707070);
+}
+
+.btn:hover{
+ border:1px solid #393B3E;
+ background-color: #bababa;
+ background-image: linear-gradient(to bottom, #bababa, #575757);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#bababa, endColorstr=#575757);
+}

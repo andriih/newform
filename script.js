@@ -20,7 +20,7 @@ regLink.addEventListener("click",function(){
 });
 logLink.addEventListener("click",function(){
 	regForm.style.display = "none";
-	loginForm.style.display="block";
+	loginForm.style.display="inline-block";
     document.title = "Login";
     success.className = "success";
 });
