@@ -1,10 +1,11 @@
 var loginForm = document.forms.loginForm,
 		mail = loginForm.elements.mail,
 		pass = loginForm.elements.pass,
-		msg = document.querySelector(".msg"),
+		msg = document.getElementsByClassName("msg"),
 		regForm = document.forms.regForm,
 		regLink = document.querySelector(".reg_link"),
 		logLink = document.querySelector(".log_link_2"),
+        success = document.querySelector(".success");
 
 	regForm = document.forms.regForm,
 		fname = regForm.elements.fname,
@@ -21,21 +22,29 @@ logLink.addEventListener("click",function(){
 	regForm.style.display = "none";
 	loginForm.style.display="block";
     document.title = "Login";
+    success.className = "success";
 });
-
+//LOGIN FORM VALIDATION
 loginForm.addEventListener("submit",function(e){
 
-	if(mail.value.length === 0){
-        console.log("mail empty");
-		e.preventDefault();
-	}else if(pass.value.length === 0){
-        msg.innerText = "pass empty";
-        e.preventDefault();
-	}else{
-        console.log("sumit");
-        document.forms.loginForm.submit();
-	}
+    if(mail.value.length===0){
+        msg[0].innerText = "Cant be empty!";
+        e.preventDefault(); 
+    }
+    if(pass.value.length===0){
+        msg[1].innerText = "Cant be empty!";
+        e.preventDefault();  
+    }
 
+	if(mail.value.length != 0 && pass.value.length != 0){
+        success.className += ' show';
+        mail.value ="";
+        pass.value = ""; 
+        //document.forms.loginForm.submit();
+    }else {
+        e.preventDefault();
+    }
+    
 });
 
 //Mail
