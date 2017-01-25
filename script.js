@@ -83,7 +83,33 @@ pass.addEventListener("keyup",function(){
 ///Form registration
 
 regForm.addEventListener("submit",function(e){
-	e.preventDefault();
+	if(fname.value.length===0){
+        msg[2].innerText = "Cant be empty!";
+        e.preventDefault(); 
+    }
+    if(mail2.value.length===0){
+        msg[3].innerText = "Cant be empty!";
+        e.preventDefault();  
+    }
+    if(pass2.value.length===0){
+        msg[4].innerText = "Cant be empty!";
+        e.preventDefault();  
+    }
+    if(c_pass.value.length===0){
+        msg[5].innerText = "Cant be empty!";
+        e.preventDefault();  
+    }
+
+    if(fname.value.length != 0 && mail2.value.length != 0 && pass2.value.length != 0 && c_pass.value.length != 0){
+        success.className += ' show';
+        fname.value ="";
+        mail2.value ="";
+        pass2.value ="";
+        c_pass.value = ""; 
+        //document.forms.loginForm.submit();
+    }else {
+        e.preventDefault();
+    }
 });
 
 fname.addEventListener("keyup", function () {
@@ -138,8 +164,6 @@ passConfirm.addEventListener("keyup",function(){
 	}else{
         errPlaceholder.textContent = "";
 	}
-
-
 });
 
 
